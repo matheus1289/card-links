@@ -60,6 +60,7 @@ body{
     margin-top: 20px;
 }
 .links{
+    position: relative;
     width: 100%;
     height: 100%;
     background-color: rgba(7, 7, 7, 0.8);
@@ -73,9 +74,24 @@ body{
     text-align: center;
     transition: 0.5s;
 }
+.links::after{
+    content: '';
+    position: absolute;
+    bottom:-25%;
+    height: 20%;
+    width: 100%;
+    right: 0;
+    background-color: rgb(39, 39, 39);
+    background: blur(5px);
+    box-shadow: 0 0 20px white;
+    filter: blur(4px);
+    z-index: -1;
+    transition: 0.5s;
+}
 .links:hover{
     background-color: rgba(7, 7, 7, 0.9);
 }
+
 .links i{
     color: rgb(88, 202, 206);
 }
